@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image: url("/SrcImg/backCar.jpg");
+  background-size:cover
+
+/* background:rgb(134, 69, 69) */
+
 }
 
 .App-logo {

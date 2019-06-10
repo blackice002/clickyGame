@@ -6,8 +6,10 @@
     margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    border:1px dotted gray; 
     border-radius: 5px; 
-    display:flex
+    display:flex;
+    background:rgba(243, 243, 243, 0.5)
 }
 
 .image {
