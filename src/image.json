@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Audi",
+        "image": "./SrcImg/audi.png",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "Ferrari",
+        "image": "./SrcImg/ferrari.png",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Honda",
+        "image": "./SrcImg/honda.png",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Infiniti",
+        "image": "./SrcImg/infiniti.png",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Marcidies",
+        "image": "./SrcImg/marcidies.png",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Maserati",
+        "image": "./SrcImg/maserati.png",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Nissan",
+        "image": "./SrcImg/nissan.png",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Porsche",
+        "image": "./SrcImg/porsche.png",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Rolls_Royce",
+        "image": "./SrcImg/rolls_royce.png",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Tesla",
+        "image": "./SrcImg/tesla.png",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Volkswagen",
+        "image": "./SrcImg/volkswagen.png",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Land_Rover",
+        "image": "./SrcImg/land_rover.png",
+        "clicked": false
+    }
+]
