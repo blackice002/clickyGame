@@ -3,7 +3,7 @@ import Header from './Components/Header/Header';
 import Card from './Components/Card/Card';
 import images from './image.json'
 import "./App.css"
-// import imageBlock from './image.json'
+
 
 class App extends React.Component {
   state = {
@@ -13,14 +13,16 @@ class App extends React.Component {
     message:"clicked the image to play game"
 }
 
+//reset function for clicked item
 resetGame = () => {
     this.setState({
         score: 0,
         images,
-        // message: "try again"
-    })      
+        message:"Try Again"
+    })  
 }
 
+//handle fro non clicked item with update score
 handleCorrect = newimages => {
     if (this.state.score === 12) {
         this.resetGame();
@@ -32,26 +34,25 @@ handleCorrect = newimages => {
     this.setState({
         images: this.shuffleArray(newimages), 
         score: this.state.score +1,
-
     });
     
 };
 
+// handle for already clicked image
 handleWrong = () => {
     if(this.state.highScore < this.state.score){
       this.setState({
         highScore:this.state.score,
-        message: "you loose the game"
-      })
+        message: "You loose the game"
+      });
     }
-    this.resetGame();
-    setTimeout(()=>1000)
-    
+    setTimeout(()=> this.resetGame(),1000); 
+      
 };
 
+// this handle the image propert clicked
 handleClick = name => {
     let guessedCorrect = false;
-    let message=this.state.massage
     const newimages = this.state.images.map(image => {
        const newPic = {...image};
        if (newPic.name === name) {
@@ -60,14 +61,16 @@ handleClick = name => {
                newPic.clicked = true;
                guessedCorrect = true;
            }
+           
        }
        return newPic;
    })       
    console.log("GUESSED CORRECT: ", guessedCorrect)
-   guessedCorrect ? this.handleCorrect(newimages,message) : this.handleWrong(newimages,message)
-   
+   guessedCorrect ? this.handleCorrect(newimages) : this.handleWrong(newimages)
+
 };
 
+// changing the index of the image array  randomly
 shuffleArray = images => {
     for (let i = images.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -76,6 +79,7 @@ shuffleArray = images => {
     return (images);   
 };
 
+// rander funtion for the app
 render() {
     return(
         <div className="App">
