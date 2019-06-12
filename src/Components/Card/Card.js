@@ -2,21 +2,16 @@ import React from 'react';
 import './Card.css';
 
 
-function Card(props) {
+const Card = props=> {
     return(
 
 <div className="card d-inline-flex">
                     <img  className="image"
-                    src={props.img} 
+                    src={props.src} 
                     alt={props.name}
-                    id={props.id}
-                    onClick={()=> props.handleClick(props.id)}
-                    /> 
-        </div> 
- 
-        
-        
-            
+                    onClick={() => props.handleClick(props.name)}
+                    />           
+        </div>           
     )
 }
 
