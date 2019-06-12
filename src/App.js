@@ -38,7 +38,6 @@ handleCorrect = newimages => {
 };
 
 handleWrong = () => {
-
     if(this.state.highScore < this.state.score){
       this.setState({
         highScore:this.state.score,
@@ -46,6 +45,7 @@ handleWrong = () => {
       })
     }
     this.resetGame();
+    setTimeout(()=>1000)
     
 };
 
